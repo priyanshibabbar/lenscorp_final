@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-family: sans-serif, Aldrich;
+  /* background-color: #151515dd; */
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 1.3s ease forwards;
+}
+
+
+.bullet {
+  display: flex;
+  align-items: center;
+}
+
+.bullet::before {
+  content: "\2022"; /* Bullet character */
+  color: #000; /* Bullet color */
+  font-size: 1.5em; /* Adjust size as needed */
+  margin-right: 8px; /* Adjust spacing between bullet and text */
+}
