@@ -5,7 +5,7 @@
   `npm install` (to install all the required node modules)
   `npm run dev` (to start the application)
 
-Deployed via vercel at -->> https://lenscorp-4j23uldk9-priyanshibabbars-projects.vercel.app/
+Deployed via vercel at -->> https://lenscorp-final.vercel.app/
 ------------------------------------------------------------------------------------------------------
 
 # React + Vite
