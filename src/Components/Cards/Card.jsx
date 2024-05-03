@@ -7,7 +7,7 @@ const Card = ({ title, description, headingColor, cardNumber }) => {
 
   return (
     <div
-      className={`bg-white w-[380px] h-[300px] flex flex-col quicksand rounded-md text-center border text-black relative overflow-hidden hover:bg-[${headingColor}] transition-colors duration-500`}
+      className={`bg-white w-full sm:w-[380px] h-[300px] flex flex-col quicksand rounded-md text-center border text-black relative overflow-hidden hover:bg-[${headingColor}] transition-colors duration-500`}
     >
       <div className="absolute top-2 left-2 flex items-center transition-all duration-500 hover:translate-x-5">
         <div className="text-6xl quicksand font-bold mr-2 text-gray-500">
@@ -30,7 +30,7 @@ const Card = ({ title, description, headingColor, cardNumber }) => {
 
 const CardList = () => {
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-8 justify-center mb-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center mb-10">
       {cardData.map((card, index) => (
         <Card
           key={card.id}

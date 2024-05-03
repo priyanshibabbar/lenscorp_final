@@ -1,13 +1,13 @@
-import React from 'react';
-import card2Data from './Card2data';
+import React from "react";
+import card2Data from "./Card2data";
 
-const Card = ({ title, description,imageUrl, headingColor, cardNumber }) => {
+const Card = ({ title, description, imageUrl, headingColor, cardNumber }) => {
   // Extract the color code from the headingColor class
-  const colorCode = headingColor.split('-')[1];
+  const colorCode = headingColor.split("-")[1];
 
   return (
     <div
-      className={`bg-white w-[380px] h-[450px] mt-8 flex flex-col rounded-lg text-center border border-gray-300 text-black relative overflow-hidden hover:bg-[${headingColor}] transition-colors duration-500`}
+      className={`bg-white w-[330px] h-[450px] mt-8 flex flex-col rounded-lg text-center border border-gray-300 text-black relative overflow-hidden hover:bg-[${headingColor}] transition-colors duration-500`}
     >
       <div className="absolute top-2 left-2 flex items-center transition-all duration-500 hover:translate-x-5">
         <div className="text-6xl font-bold mr-2 text-gray-500">
@@ -16,10 +16,10 @@ const Card = ({ title, description,imageUrl, headingColor, cardNumber }) => {
         <div
           className={`text-2xl font-bold transition-all duration-500 hover:translate-x-5  ${headingColor}`}
         >
-          <h2 style={{ width: '220px' }}>{title}</h2>
+          <h2 style={{ width: "220px" }}>{title}</h2>
         </div>
       </div>
-      <div className="flex-grow flex flex-col justify-center items-center ">
+      <div className="flex-grow flex flex-col justify-center items-center">
         <img
           src={`${imageUrl}`}
           alt={`${title} illustration`}
@@ -37,7 +37,7 @@ const Card = ({ title, description,imageUrl, headingColor, cardNumber }) => {
 
 const CardList2 = () => {
   return (
-    <div className="flex flex-row gap-8 justify-center overflow-x-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
       {card2Data.map((card, index) => (
         <Card
           key={card.id}
@@ -45,12 +45,12 @@ const CardList2 = () => {
           description={card.description}
           headingColor={
             card.id === 5
-              ? 'text-green-400'
+              ? "text-green-400"
               : card.id === 6
-              ? 'text-sky-400'
+              ? "text-sky-400"
               : card.id === 7
-              ? 'text-fuchsia-400'
-              : 'text-orange-400'
+              ? "text-fuchsia-400"
+              : "text-orange-400"
           }
           cardNumber={`0${index + 1}`}
           imageUrl={card.imageUrl}
