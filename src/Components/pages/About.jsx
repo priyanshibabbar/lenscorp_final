@@ -34,7 +34,7 @@ const About = () => {
         >
           <div className="w-72 h-72 sm:w-96 sm:h-96 lg:w-72 lg:h-72 xl:w-96 xl:h-96 overflow-hidden rounded-lg m-2  ">
             <img
-              src="src/assets/people.jpg"
+              src="https://lenscorp.ai/_next/image?url=%2FImages%2FaboutLatest.webp&w=640&q=75"
               alt="people "
               className="h-full w-full object-cover object-center rounded-lg  "
             />
